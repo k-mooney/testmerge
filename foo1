@@ -1,0 +1,18 @@
+Survey of how suite/schedule works today
+
+Customer creates schedule using editor in eclipse.
+UI calls into classes like ThinkTimeOptionsControl.
+ThinkTime is an interface which appears to be generated code.
+ThinkTimeImpl implements the interface.
+Persistence is achieved using EMF.
+
+EMF tooling allows you to create UML diagrams.  With it you can model
+a data model and generate code or other output.
+
+Codegen takes the EMF model and produces Java classes that represent
+a feature like Think and includes all the attributes.  The attributes
+are essentially name/value pairs.
+
+Engine runtime kernel contains a KThink.java class that has methods
+for setting attributes and includes an execute() method to perform
+the desired action.
